@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIZORA — One Platform. Every Business | By Wixfox Technologies</title>
+  <meta name="description" content="All-in-one cloud business management, GST billing, CRM, inventory, and accounting platform for growing Indian enterprises. Powered by Wixfox Technologies." />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  
+  <!-- Inter Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bizora: {
+              blue: '#2865F5',
+              'blue-hover': '#1d52d4',
+              purple: '#5734D9',
+              'purple-hover': '#4627b5',
+              dark: '#0F172A',
+              surface: '#1E293B',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass { background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(16px); }
+    .gradient-text {
+      background: linear-gradient(135deg, #60A5FA 0%, #818CF8 50%, #C084FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gradient-border {
+      background: linear-gradient(135deg, rgba(40, 101, 245, 0.4), rgba(87, 52, 217, 0.4));
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.05); }
+    }
+    .glow-blob {
+      animation: pulseGlow 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 text-center py-2 px-4 text-xs font-medium text-blue-100 flex items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <span><strong>BIZORA</strong> by Wixfox Technologies — Modern Business Operating System for India & Beyond.</span>
+    <a href="#demo" class="underline font-bold text-white hover:text-yellow-200 ml-1">Test Live Demo ↓</a>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="border-b border-slate-800/80 sticky top-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-0.5 shadow-lg shadow-blue-500/25 flex items-center justify-center">
+          <img src="assets/logo.jpg" alt="BIZORA Logo" class="w-full h-full object-cover rounded-[14px]" />
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-black tracking-tight text-white group-hover:text-blue-400 transition">BIZORA</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full border border-blue-500/30">
+              By Wixfox
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-medium">One Platform. Every Business.</p>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#features" class="hover:text-blue-400 transition">Modules</a>
+        <a href="#demo" class="hover:text-blue-400 transition">Interactive Demo</a>
+        <a href="#comparison" class="hover:text-blue-400 transition">Why BIZORA</a>
+        <a href="#pricing" class="hover:text-blue-400 transition">Pricing Plans</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#demo" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-xl text-purple-300 bg-purple-950/50 hover:bg-purple-900/60 border border-purple-800/60 transition">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          <span>Super Admin</span>
+        </a>
+        <a href="#demo" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+          <span>Start Free Trial</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-20 pb-24 px-6 overflow-hidden">
+    <!-- Glowing Gradient Blob -->
+    <div class="glow-blob absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[320px] bg-gradient-to-tr from-blue-600/25 to-purple-600/25 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+    <div class="max-w-5xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 text-blue-300 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 shadow-inner">
+        <i data-lucide="sparkles" class="w-4 h-4 text-yellow-400"></i>
+        <span>Next-Gen Cloud ERP, Billing & CRM Ecosystem</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.1] text-white">
+        One Platform. <br />
+        <span class="gradient-text">Every Business.</span>
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+        Stop juggling 5 different apps for GST Billing, CRM pipelines, stock inventory, and customer khata ledgers.
+        BIZORA connects your entire business operating lifecycle into one modern cloud ecosystem.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a href="#demo" class="inline-flex items-center gap-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-xl shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+          <span>Explore Live Invoice Demo</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="#pricing" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm px-6 py-3.5 rounded-xl border border-slate-700 hover:border-slate-600 transition">
+          <i data-lucide="badge-percent" class="w-4 h-4 text-emerald-400"></i>
+          <span>View Pricing (From ₹0)</span>
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-xs text-slate-400">
+        <div class="flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+          <span>100% Indian GST Compliance (CGST, SGST, IGST)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+          <span>Instant UPI QR Code on Invoices</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+          <span>Multi-Tenant Cloud Data Isolation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Demo Sandbox Section -->
+  <section id="demo" class="py-16 px-6 bg-slate-900/60 border-y border-slate-800/80">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-1">Hands-On Interactive Experience</span>
+        <h2 class="text-3xl font-extrabold text-white">Test BIZORA's Smart GST Invoicing Engine</h2>
+        <p class="text-xs text-slate-400 mt-2">Change item quantity or rate below to see live automatic CGST/SGST or IGST calculation, roundoff, and UPI payment QR generation.</p>
+      </div>
+
+      <!-- Interactive Invoice Card -->
+      <div class="bg-white text-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-200 max-w-4xl mx-auto">
+        <!-- Top Invoice Bar -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-6 border-b-2 border-slate-900 gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-blue-600 p-0.5 flex items-center justify-center shadow-md">
+              <img src="assets/logo.jpg" alt="Logo" class="w-full h-full object-cover rounded-[10px]" />
+            </div>
+            <div>
+              <h3 class="text-lg font-black text-slate-900 leading-tight">Apex Tech Innovations Pvt. Ltd.</h3>
+              <p class="text-xs text-slate-500">Unit 402, Tech Park, Andheri East, Mumbai, Maharashtra - 400069</p>
+              <p class="text-xs font-mono text-slate-700 mt-0.5"><strong>GSTIN:</strong> 27AABCA1234F1Z8 • <strong>State:</strong> Maharashtra (27)</p>
+            </div>
+          </div>
+
+          <div class="text-left sm:text-right">
+            <span class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-black uppercase tracking-wider rounded">
+              TAX INVOICE
+            </span>
+            <p class="text-xs font-mono font-bold text-slate-800 mt-1">INV # BIZ/26-27/00101</p>
+          </div>
+        </div>
+
+        <!-- Customer Select & Tax Type Toggle -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4 border-b border-slate-200 text-xs">
+          <div>
+            <label class="font-bold text-slate-600 uppercase text-[10px] block mb-1">Customer / Billed To</label>
+            <select id="partySelect" onchange="calculateInvoice()" class="w-full p-2 bg-slate-50 border border-slate-300 rounded-lg font-semibold text-slate-800">
+              <option value="intra">Reliance Retail Ltd (Mumbai, Maharashtra) — Intra-State</option>
+              <option value="inter">TCS Digital Hub (Bengaluru, Karnataka) — Inter-State (IGST)</option>
+            </select>
+          </div>
+
+          <div class="sm:text-right flex flex-col justify-end">
+            <span class="text-[10px] text-slate-500 uppercase font-bold">Tax Mechanism</span>
+            <span id="taxTypeLabel" class="text-xs font-bold text-blue-600">Intra-State: CGST (9%) + SGST (9%)</span>
+          </div>
+        </div>
+
+        <!-- Line Items Table -->
+        <div class="py-4 overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="bg-slate-100 text-slate-600 font-bold uppercase text-[10px]">
+                <th class="py-2.5 px-3">Item Description</th>
+                <th class="py-2.5 px-3 font-mono">HSN</th>
+                <th class="py-2.5 px-3 text-right">Qty</th>
+                <th class="py-2.5 px-3 text-right">Rate (₹)</th>
+                <th class="py-2.5 px-3 text-right">GST %</th>
+                <th class="py-2.5 px-3 text-right">Total (₹)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 font-medium">
+              <tr>
+                <td class="py-3 px-3">
+                  <p class="font-bold text-slate-900">Smart POS Thermal Printer (80mm)</p>
+                  <p class="text-[10px] text-slate-400">High Speed USB/Ethernet</p>
+                </td>
+                <td class="py-3 px-3 font-mono text-slate-500">844332</td>
+                <td class="py-3 px-3 text-right">
+                  <input type="number" id="qty1" value="2" min="1" max="100" oninput="calculateInvoice()" class="w-16 p-1 border rounded text-right font-bold" />
+                </td>
+                <td class="py-3 px-3 text-right">
+                  <input type="number" id="rate1" value="4500" min="100" step="50" oninput="calculateInvoice()" class="w-20 p-1 border rounded text-right font-bold" />
+                </td>
+                <td class="py-3 px-3 text-right">18%</td>
+                <td class="py-3 px-3 text-right font-bold text-slate-900" id="total1">₹10,620</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-3">
+                  <p class="font-bold text-slate-900">Thermal Billing Paper Rolls (Pack of 50)</p>
+                  <p class="text-[10px] text-slate-400">Premium Grade White</p>
+                </td>
+                <td class="py-3 px-3 font-mono text-slate-500">481190</td>
+                <td class="py-3 px-3 text-right">
+                  <input type="number" id="qty2" value="3" min="1" max="100" oninput="calculateInvoice()" class="w-16 p-1 border rounded text-right font-bold" />
+                </td>
+                <td class="py-3 px-3 text-right">
+                  <input type="number" id="rate2" value="1250" min="100" step="50" oninput="calculateInvoice()" class="w-20 p-1 border rounded text-right font-bold" />
+                </td>
+                <td class="py-3 px-3 text-right">12%</td>
+                <td class="py-3 px-3 text-right font-bold text-slate-900" id="total2">₹4,200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Totals & Payment Settlement -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t-2 border-slate-900 text-xs">
+          <!-- UPI & Bank Details Box -->
+          <div class="p-4 bg-blue-50/60 rounded-2xl border border-blue-100 flex items-center gap-4">
+            <div class="w-16 h-16 bg-white p-1 rounded-xl border border-blue-200 flex items-center justify-center shadow-sm shrink-0">
+              <i data-lucide="qr-code" class="w-12 h-12 text-slate-900"></i>
+            </div>
+            <div>
+              <p class="font-bold text-slate-900">Scan & Pay via UPI</p>
+              <p class="text-[11px] text-slate-500">GPay, PhonePe, Paytm, BHIM</p>
+              <p class="text-[11px] font-mono font-bold text-blue-700 mt-0.5">apextech@hdfcbank</p>
+            </div>
+          </div>
+
+          <!-- Calculation Summary -->
+          <div class="space-y-1.5 text-right font-medium">
+            <div class="flex justify-between text-slate-600">
+              <span>Taxable Subtotal:</span>
+              <span id="taxableAmount" class="font-bold text-slate-800">₹12,750</span>
+            </div>
+            <div id="cgstRow" class="flex justify-between text-slate-600">
+              <span>CGST Total:</span>
+              <span id="cgstAmount" class="font-bold text-slate-800">₹1,035</span>
+            </div>
+            <div id="sgstRow" class="flex justify-between text-slate-600">
+              <span>SGST Total:</span>
+              <span id="sgstAmount" class="font-bold text-slate-800">₹1,035</span>
+            </div>
+            <div id="igstRow" class="flex justify-between text-slate-600 hidden">
+              <span>IGST (Inter-State):</span>
+              <span id="igstAmount" class="font-bold text-slate-800">₹2,070</span>
+            </div>
+            <div class="flex justify-between text-slate-600">
+              <span>Round-off:</span>
+              <span id="roundOff" class="font-bold text-slate-800">₹0.00</span>
+            </div>
+            <div class="flex justify-between text-base font-black text-slate-900 pt-2 border-t border-slate-300">
+              <span>Grand Total:</span>
+              <span id="grandTotal" class="text-blue-600 text-lg">₹14,820</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+          <span class="text-slate-500">✨ Generated by BIZORA GST Engine</span>
+          <button onclick="shareWhatsApp()" class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-xl transition shadow">
+            <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+            <span>Simulate WhatsApp Share</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Module Breakdown (PRD Aligned) -->
+  <section id="features" class="py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">Connected Architecture</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Everything Your Business Needs In One Stack</h2>
+        <p class="mt-3 text-slate-400 text-sm">
+          Lead → Customer → Quotation → Sales Order → Invoice → Payment → Accounting → Reporting → Automation
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 1. Billing & Invoicing -->
+        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-blue-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-5 border border-blue-500/20">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Smart GST Invoicing</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Generate professional Tax Invoices, Quotations, Proforma, and Delivery Challans. Automated CGST, SGST, IGST calculations, HSN/SAC lookups, and UPI QR code embedding.
+          </p>
+        </div>
+
+        <!-- 2. CRM & Sales Pipeline -->
+        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-500/20">
+            <i data-lucide="users-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Sales CRM & Pipelines</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Track leads from first touch to deal closed with Kanban stage boards. Log follow-ups, assign sales reps, capture interaction history, and convert leads into customers with 1 click.
+          </p>
+        </div>
+
+        <!-- 3. Inventory & Barcodes -->
+        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-5 border border-emerald-500/20">
+            <i data-lucide="package" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Inventory & Multi-Warehouse</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Real-time stock valuation, SKU & barcode management, low-stock reorder alerts, and automatic deductions on invoice generation.
+          </p>
+        </div>
+
+        <!-- 4. Customer Khata & Suppliers -->
+        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-amber-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-5 border border-amber-500/20">
+            <i data-lucide="wallet-cards" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Digital Khata & Accounting</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Customer & vendor ledgers with complete transaction balance history. Instant WhatsApp payment reminders and automated payment receipt generation.
+          </p>
+        </div>
+
+        <!-- 5. Business Automations -->
+        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-purple-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 border border-purple-500/20">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">WhatsApp & Trigger Automation</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Trigger automated payment reminders on due dates, send WhatsApp invoice notifications, and alert inventory managers when items reach minimum threshold.
+          </p>
+        </div>
+
+        <!-- 6. Multi-Tenant Super Admin -->
+        <div class="bg-slate-900/80 rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-5 border border-cyan-500/20">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Super Admin Governance</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Wixfox platform administration panel: monitor total registered businesses, MRR/ARR growth, subscription licenses, system health, and audit logs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans (PRD Table Aligned) -->
+  <section id="pricing" class="py-20 px-6 bg-slate-900/50 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-1">Simple & Scalable</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Transparent SaaS Pricing for Every Business</h2>
+        <p class="mt-2 text-slate-400 text-xs">Start free, upgrade when your team and volume grow.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Free Plan -->
+        <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-bold text-white">Free Starter</h3>
+              <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full border border-slate-700">Free Forever</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-5">For micro businesses and solopreneurs</p>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">₹0</span>
+              <span class="text-xs text-slate-400"> / month</span>
+            </div>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs text-slate-300">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Up to 30 Invoices / mo</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Single User License</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Basic Customer Khata</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Standard PDF Generator</div>
+            </div>
+          </div>
+          <button class="mt-8 w-full py-2.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
+            Start Free
+          </button>
+        </div>
+
+        <!-- Starter Plan -->
+        <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-bold text-white">Starter</h3>
+              <span class="text-[10px] bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded-full border border-blue-500/30">Retail Choice</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-5">For retail shops, freelancers & local traders</p>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">₹299</span>
+              <span class="text-xs text-slate-400"> / month</span>
+            </div>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs text-slate-300">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Unlimited GST Invoices</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Up to 2 User Accounts</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> GSTR-1 & 3B Summaries</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> WhatsApp Invoice Sharing</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> UPI QR Code on Bills</div>
+            </div>
+          </div>
+          <button class="mt-8 w-full py-2.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
+            Select Starter
+          </button>
+        </div>
+
+        <!-- Growth Plan (Most Popular) -->
+        <div class="bg-gradient-to-b from-slate-800 to-slate-900 rounded-2xl p-6 border-2 border-blue-500 shadow-xl shadow-blue-500/20 flex flex-col justify-between relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+            Most Popular
+          </span>
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-bold text-white">Growth</h3>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-500/30">Full CRM</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-5">For growing businesses requiring CRM pipelines</p>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">₹699</span>
+              <span class="text-xs text-slate-400"> / month</span>
+            </div>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs text-slate-300">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Everything in Starter +</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Up to 5 User Licenses</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Full Sales CRM Kanban Pipeline</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Multi-Warehouse Stock & Barcodes</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Automated WhatsApp Follow-ups</div>
+            </div>
+          </div>
+          <button class="mt-8 w-full py-2.5 rounded-xl text-xs font-bold bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 transition">
+            Start 14-Day Free Trial
+          </button>
+        </div>
+
+        <!-- Professional Plan -->
+        <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-lg font-bold text-white">Professional</h3>
+              <span class="text-[10px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full border border-purple-500/30">Enterprise ERP</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-5">Complete ERP for established enterprises</p>
+            <div class="mb-6">
+              <span class="text-3xl font-black text-white">₹1,499</span>
+              <span class="text-xs text-slate-400"> / month</span>
+            </div>
+            <div class="space-y-2 border-t border-slate-800 pt-4 text-xs text-slate-300">
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Everything in Growth +</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Up to 15 User Licenses with RBAC</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Advanced Double-Entry Books</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Purchase Orders & Payables</div>
+              <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Dedicated Account Manager</div>
+            </div>
+          </div>
+          <button class="mt-8 w-full py-2.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-12 px-6 bg-slate-950 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center p-0.5 shadow">
+          <img src="assets/logo.jpg" alt="BIZORA" class="w-full h-full object-cover rounded-lg" />
+        </div>
+        <div>
+          <span class="text-sm font-bold text-white">BIZORA</span>
+          <p class="text-[11px] text-slate-400">One Platform. Every Business. A Wixfox Technologies Venture.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-slate-400">
+        <a href="#features" class="hover:text-white transition">Features</a>
+        <a href="#demo" class="hover:text-white transition">Live Demo</a>
+        <a href="#pricing" class="hover:text-white transition">Pricing</a>
+        <a href="https://github.com/founder-svg/BIZORA" target="_blank" class="hover:text-white transition">GitHub Repo</a>
+      </div>
+
+      <p class="text-[11px] text-slate-500">
+        &copy; 2026 Wixfox Technologies. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Interactive Invoicing Calculator Function
+    function calculateInvoice() {
+      const q1 = Math.max(1, parseInt(document.getElementById('qty1').value) || 1);
+      const r1 = Math.max(0, parseFloat(document.getElementById('rate1').value) || 0);
+      const q2 = Math.max(1, parseInt(document.getElementById('qty2').value) || 1);
+      const r2 = Math.max(0, parseFloat(document.getElementById('rate2').value) || 0);
+
+      const taxable1 = q1 * r1;
+      const taxable2 = q2 * r2;
+      const totalTaxable = taxable1 + taxable2;
+
+      const party = document.getElementById('partySelect').value;
+      const isInter = (party === 'inter');
+
+      const tax1 = taxable1 * 0.18;
+      const tax2 = taxable2 * 0.12;
+      const totalTax = tax1 + tax2;
+
+      document.getElementById('total1').innerText = '₹' + Math.round(taxable1 + tax1).toLocaleString('en-IN');
+      document.getElementById('total2').innerText = '₹' + Math.round(taxable2 + tax2).toLocaleString('en-IN');
+      document.getElementById('taxableAmount').innerText = '₹' + Math.round(totalTaxable).toLocaleString('en-IN');
+
+      const taxLabel = document.getElementById('taxTypeLabel');
+      const cgstRow = document.getElementById('cgstRow');
+      const sgstRow = document.getElementById('sgstRow');
+      const igstRow = document.getElementById('igstRow');
+
+      if (isInter) {
+        taxLabel.innerText = 'Inter-State: Integrated GST (IGST 18% & 12%)';
+        taxLabel.className = 'text-xs font-bold text-purple-400';
+        cgstRow.classList.add('hidden');
+        sgstRow.classList.add('hidden');
+        igstRow.classList.remove('hidden');
+        document.getElementById('igstAmount').innerText = '₹' + Math.round(totalTax).toLocaleString('en-IN');
+      } else {
+        taxLabel.innerText = 'Intra-State: CGST (Half) + SGST (Half)';
+        taxLabel.className = 'text-xs font-bold text-blue-600';
+        cgstRow.classList.remove('hidden');
+        sgstRow.classList.remove('hidden');
+        igstRow.classList.add('hidden');
+        document.getElementById('cgstAmount').innerText = '₹' + Math.round(totalTax / 2).toLocaleString('en-IN');
+        document.getElementById('sgstAmount').innerText = '₹' + Math.round(totalTax / 2).toLocaleString('en-IN');
+      }
+
+      const rawGrand = totalTaxable + totalTax;
+      const grand = Math.round(rawGrand);
+      const diff = (grand - rawGrand).toFixed(2);
+
+      document.getElementById('roundOff').innerText = '₹' + diff;
+      document.getElementById('grandTotal').innerText = '₹' + grand.toLocaleString('en-IN');
+    }
+
+    function shareWhatsApp() {
+      const grand = document.getElementById('grandTotal').innerText;
+      const msg = encodeURIComponent("Namaste! Here is your Tax Invoice #BIZ/26-27/00101 for " + grand + " from Apex Tech Innovations (Powered by BIZORA). Pay directly via UPI: apextech@hdfcbank. Thank you!");
+      window.open("https://wa.me/?text=" + msg, "_blank");
+    }
+
+    // Run initial calculation
+    calculateInvoice();
+  </script>
+</body>
+</html>
